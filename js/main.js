@@ -2,7 +2,7 @@
  * Fichier de base pour application web HTML/CSS/JS
  * @author  Steve Fallet
  * @version 0.1
- * @since   2019-08-19
+ * @since   2021-08-31
  */
 
 (function main() {
