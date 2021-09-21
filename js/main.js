@@ -14,6 +14,31 @@
   let fahrenheit = celcius * 9 / 5 + 32;
   alert(`${fahrenheit} °F`);*/
 
-  // console.log(a);
+// Récupération des éléments HTMl à manipuler
+const formulaire = document.querySelector('form');
+const txtCelcius = formulaire.querySelector('#celsius');
+const strongFahrenheit = document.querySelector('.res_fah');
+const ulHistorique = document.querySelector('.historique');
+
+
+
+
+formulaire.addEventListener('submit', function envoiForm(event) {
+  // Annule le comportement par défaut
+  event.preventDefault();
+
+  // Récupère la valeur saisie et la converti en Float
+  let celcius = parseFloat(txtCelcius.value);
+  // Calcule et affiche le résultat
+  strongFahrenheit.innerText = celcius * 9 / 5 + 32;
+
+  // Vide le champ de saisie
+  txtCelcius.value = '';
+  // Donne le focus
+  txtCelcius.focus();
+});
+
+console.log(formulaire, txtCelcius, strongFahrenheit, ulHistorique);
+
 }()); // Main IIFE
 

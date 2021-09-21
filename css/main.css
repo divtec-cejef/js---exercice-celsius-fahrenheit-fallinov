@@ -25,6 +25,10 @@ button:hover {
     box-shadow: 0 8px 16px rgba(0,0,0,.5);
 }
 
+button[type="reset"] {
+    background-color: #8d99ae;
+    color: #2b2d42;
+}
 
 /****** Formulaires ******/
 ul.form {
