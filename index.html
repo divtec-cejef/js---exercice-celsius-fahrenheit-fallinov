@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <h1>Convertisseur Celsius > Fahrenheit</h1>
+
+<form action="https://kode.ch/getpost/" method="get">
+    <ul class="form">
+        <li>
+            <label for="celsius">Saisir une température en °C</label>
+            <input type="text" id="celsius" name="celsius">
+        </li>
+        <li>
+            <button type="submit">Envoyer</button>
+            <button type="reset">Réinitialiser</button>
+        </li>
+    </ul>
+</form>
 
 <!-- JavaScript -->
 <script src="js/main.js"></script>
