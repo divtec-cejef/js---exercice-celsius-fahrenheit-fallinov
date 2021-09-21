@@ -12,6 +12,8 @@
   "node": true,
   // Allow ES6.
   "esversion": 6,
+  // Désactive erreur pour prompt, console, ...
+  "devel": true,
   /*
    * ENFORCING OPTIONS
    * =================
