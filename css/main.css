@@ -15,8 +15,19 @@ html button {
     border: none;
     background-color: #ef233c;
     color: #edf2f4;
+    transition: all .3s ease;
 }
 
+html button:hover,
+html button[type="reset"]:hover {
+    background-color: #2b2d42;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.5);
+}
+
+html button[type="reset"] {
+    background-color: #8d99ae;
+    margin-left: 1rem;
+}
 
 /****** Formulaires ******/
 
