@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+    font-size: 150%;
+    font-weight: 400;
+    color: #2b2d42;
+    background-color: #edf2f4;
+}
+
+/***** Boutons ******/
+button {
+    padding: .6rem 1rem;
+    border: none;
+    background-color: #ef233c;
+    color: #edf2f4;
+    transition: all .3s ease;
+}
+
+button:hover {
+    background-color: #8d99ae;
+    color: #2b2d42;
+    box-shadow: 0 8px 16px rgba(0,0,0,.5);
+}
+
+
+/****** Formulaires ******/
+ul.form {
+    list-style-type: none;
+    padding: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: .3rem;
+}
+
+input,
+button {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+input {
+    margin-bottom: 1rem;
+    padding:  .3rem .6rem;
+}
