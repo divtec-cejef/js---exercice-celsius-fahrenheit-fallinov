@@ -28,15 +28,18 @@ formulaire.addEventListener('submit', function envoiForm(event) {
 
   // Récupère la saisie du visiteur et la transforme en float
   let celcius = parseFloat(txtCelsius.value);
-  // Récupère la valeur en °F
-  let fahrenheit = celcius * 9 / 5 + 32;
-  // Affiche le résultat dans <strong>
-  strongFahrenheit.innerText =  fahrenheit + '°F';
-  // Ajout un <li> avec la conversion à l'<ul> de l'historique
-  ulHistorique.innerHTML += `<li>${celcius}°C => ${fahrenheit}°F</li>`;
 
-
-
+  // Test si celcius n'est pas un nombre (NaN)
+  if (isNaN(celcius)){
+    window.alert('Entrer un nombre valide !!!');
+  } else {
+    // Récupère la valeur en °F
+    let fahrenheit = celcius * 9 / 5 + 32;
+    // Affiche le résultat dans <strong>
+    strongFahrenheit.innerText =  fahrenheit + '°F';
+    // Ajout un <li> avec la conversion à l'<ul> de l'historique
+    ulHistorique.innerHTML += `<li>${celcius}°C => ${fahrenheit}°F</li>`;
+  }
 
   // Vide le champ texte
   txtCelsius.value = '';
