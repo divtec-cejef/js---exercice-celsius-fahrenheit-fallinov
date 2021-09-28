@@ -42,6 +42,20 @@ formulaire.addEventListener('submit', function envoiForm(event) {
   txtCelcius.focus();
 });
 
+// Evénement reset du formualire
+formulaire.addEventListener('reset', function resetForm() {
+  strongFahrenheit.innerText = '';
+  ulHistorique.innerHTML = '';
+  txtCelcius.focus();
+});
+
+// Ecoute touches clavier enfoncées sur le champ de formulaire
+txtCelcius.addEventListener('keyup', function escKey(event){
+  // alert(event.key);
+  if (event.key === 'Escape') {
+    formulaire.reset();
+  }
+});
 
 
 }()); // Main IIFE
