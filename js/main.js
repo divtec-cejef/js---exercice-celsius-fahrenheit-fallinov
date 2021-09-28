@@ -57,5 +57,14 @@ formulaire.addEventListener('submit', function envoiForm(event) {
     txtCelsius.focus();
   });
 
+  // Ecoute les événements clavier
+  txtCelsius.addEventListener('keyup', function clavier(event) {
+    // Si touche est Escape => reset
+    if (event.key === 'Escape') {
+      formulaire.reset();
+    }
+    // window.alert(event.key);
+  });
+
 }()); // Main IIFE
 
