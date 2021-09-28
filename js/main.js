@@ -20,8 +20,7 @@ const txtCelcius = formulaire.querySelector('#celsius');
 const strongFahrenheit = document.querySelector('.res_fah');
 const ulHistorique = document.querySelector('.historique');
 
-
-
+  console.log(formulaire, txtCelcius, strongFahrenheit, ulHistorique);
 
 formulaire.addEventListener('submit', function envoiForm(event) {
   // Annule le comportement par défaut
@@ -30,7 +29,12 @@ formulaire.addEventListener('submit', function envoiForm(event) {
   // Récupère la valeur saisie et la converti en Float
   let celcius = parseFloat(txtCelcius.value);
   // Calcule et affiche le résultat
-  strongFahrenheit.innerText = celcius * 9 / 5 + 32;
+  let fahrenheit = celcius * 9 / 5 + 32;
+
+  strongFahrenheit.innerText = fahrenheit;
+
+  // Ajouter à l'historique le calcul C => F
+  ulHistorique.innerHTML += `<li>${celcius}°C => ${fahrenheit}°F</li>`;
 
   // Vide le champ de saisie
   txtCelcius.value = '';
@@ -38,7 +42,7 @@ formulaire.addEventListener('submit', function envoiForm(event) {
   txtCelcius.focus();
 });
 
-console.log(formulaire, txtCelcius, strongFahrenheit, ulHistorique);
+
 
 }()); // Main IIFE
 
