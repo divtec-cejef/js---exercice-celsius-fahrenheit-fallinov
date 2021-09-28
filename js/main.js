@@ -47,5 +47,15 @@ formulaire.addEventListener('submit', function envoiForm(event) {
   txtCelsius.focus();
 });
 
+// Reset du formulaire
+  formulaire.addEventListener('reset', function resetForm() {
+    // Vider résultat
+    strongFahrenheit.innerText = '';
+    // Vider liste historique
+    ulHistorique.innerHTML = '';
+    // Redonne le focus au champ
+    txtCelsius.focus();
+  });
+
 }()); // Main IIFE
 
