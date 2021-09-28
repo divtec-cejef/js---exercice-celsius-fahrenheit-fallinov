@@ -31,13 +31,13 @@ formulaire.addEventListener('submit', function envoiForm(event) {
 
   // Si celcius n'est pas un nombre : isNaN - is Not A Number
   if (isNaN(celcius)) {
+    // Affiche un message d'erreur à l'utilisateur
     alert('Entrez un nombre valide !');
   } else {
-    // Calcule et affiche le résultat
+    // Calcule le résultat
     let fahrenheit = celcius * 9 / 5 + 32;
-
+    // Affiche le résultat
     strongFahrenheit.innerText = fahrenheit;
-
     // Ajouter à l'historique le calcul C => F
     ulHistorique.innerHTML += `<li>${celcius}°C => ${fahrenheit}°F</li>`;
   }
